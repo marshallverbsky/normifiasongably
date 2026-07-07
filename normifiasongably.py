@@ -6,8 +6,8 @@ from json import dumps
 import ffmpeg, os, json, re, math, shutil
 
 audioexts = ('.mp3', '.wav', '.m4a')
-triagedir = '/home/mverbsky/media/musictriage'
-musicdir = '/home/mverbsky/media/music'
+triagedir = '/home/user/example/triage'
+musicdir = '/home/user/example/music'
 
 ###define function for formatting the loudnorm output###
 def parse_loudnorm_output(output_lines):
@@ -192,5 +192,5 @@ for root, dirs, files in os.walk(triagedir, topdown=False):
         print(f"{root} is empty, removing")
         os.rmdir(root)
 
-os.system("sudo chown -R mverbsky:mverbsky /home/mverbsky/media")
-os.system("sudo chmod -R 777 /home/mverbsky/media")
+os.system("sudo chown -R user:user /home/user/example")
+os.system("sudo chmod -R 777 /home/user/example")
